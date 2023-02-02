@@ -63,27 +63,19 @@ gsap.from('.timeline h1', {
     delay: 0.8,
     opacity: 100,
     duration: 0.8,
-    y: -500
+    x: -1000
 });
 
 gsap.from('#dot1', {
-    scrollTrigger: "#timeline_index_1",
+    scrollTrigger: "#timeline_item_1",
     delay: 0.5,
     opacity: 100,
     duration: 0.8,
     y: 500
 });
 
-gsap.from('#timeline_index_1', {
-    scrollTrigger: "#timeline_index_1",
-    delay: 0.5,
-    opacity: 100,
-    duration: 0.8,
-    x: -1500
-});
-
-gsap.from('#timeline_desc_1', {
-    scrollTrigger: "#timeline_index_1",
+gsap.from('#timeline_item_1', {
+    scrollTrigger: "#timeline_item_1",
     delay: 0.5,
     opacity: 100,
     duration: 0.8,
@@ -93,77 +85,53 @@ gsap.from('#timeline_desc_1', {
 
 
 gsap.from('#dot2', {
-    scrollTrigger: "#timeline_index_2",
+    scrollTrigger: "#timeline_item_2",
     delay: 0.5,
     opacity: 100,
     duration: 0.8,
     y: 500
 });
 
-gsap.from('#timeline_index_2', {
-    scrollTrigger: "#timeline_index_2",
+gsap.from('#timeline_item_2', {
+    scrollTrigger: "#timeline_item_2",
     delay: 0.5,
     opacity: 100,
     duration: 0.8,
     x: 1500
 });
-
-gsap.from('#timeline_desc_2', {
-    scrollTrigger: "#timeline_index_2",
-    delay: 0.5,
-    opacity: 100,
-    duration: 0.8,
-    x: -1500
-});
-
 
 gsap.from('#dot3', {
-    scrollTrigger: "#timeline_index_3",
+    scrollTrigger: "#timeline_item_3",
     delay: 0.5,
     opacity: 100,
     duration: 0.8,
     y: 500
 });
 
-gsap.from('#timeline_index_3', {
-    scrollTrigger: "#timeline_index_3",
-    delay: 0.5,
-    opacity: 100,
-    duration: 0.8,
-    x: -1500
-});
-
-gsap.from('#timeline_desc_3', {
-    scrollTrigger: "#timeline_index_3",
+gsap.from('#timeline_item_3', {
+    scrollTrigger: "#timeline_item_3",
     delay: 0.5,
     opacity: 100,
     duration: 0.8,
     x: 1500
 });
+
 
 
 
 
 gsap.from('#dot4', {
-    scrollTrigger: "#timeline_index_4",
+    scrollTrigger: "#timeline_item_4",
     delay: 0.5,
     opacity: 100,
     duration: 0.8,
     y: 500
 });
 
-gsap.from('#timeline_index_4', {
-    scrollTrigger: "#timeline_index_4",
+gsap.from('#timeline_item_4', {
+    scrollTrigger: "#timeline_item_4",
     delay: 0.5,
     opacity: 100,
     duration: 0.8,
     x: 1500
-});
-
-gsap.from('#timeline_desc_4', {
-    scrollTrigger: "#timeline_index_4",
-    delay: 0.5,
-    opacity: 100,
-    duration: 0.8,
-    x: -1500
 });
