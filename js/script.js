@@ -1,137 +1,51 @@
-gsap.registerPlugin(ScrollTrigger);
+ 
 
-gsap.from('.slogan_content h1', { opacity: 100, duration: 0.8, x: -600 });
-gsap.from('.slogan_content p', { opacity: 100, duration: 0.8, x: -600, delay: 0.5 });
-gsap.from('.frontpage_image', { opacity: 0, duration: 0.5, x: 600 });
-gsap.from('.model', { duration: 1, delay: 0.5, x: 1500, stagger: 0.1, ease: "back.out(1.7)" });
+const body = document.body; 
 
+let lastScroll = 0; 
 
-gsap.from('.about_wrapper h1', {
-    scrollTrigger: '.about_wrapper h1',
-    opacity: 0,
-    duration: 0.8,
-    x: 500,
-});
-gsap.from('.about_wrapper p', {
-    scrollTrigger: '.about_wrapper p',
-    opacity: 0,
-    duration: 0.8,
-    delay: 0,
-    x: 1500,
-});
+ 
+ 
 
-gsap.from('.service_card', {
-    scrollTrigger: {
-        trigger: '.gallery',
-        start: "top center"
-    },
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.2,
-    x: 1500
-});
-gsap.from('.gallery_wrapper h1', {
-    scrollTrigger: '.service_card',
-    opacity: 0,
-    delay: 0.8,
-    duration: 0.8,
-    stagger: 0.2,
-    y: 500
-});
+window.addEventListener("scroll", () => { 
 
-gsap.from('.questionmark_left', {
-    scrollTrigger: ".about_wrapper p",
-    delay: 1,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.05,
-    y: -500,
-    ease: "back.out(1.7)"
-});
-gsap.from('.questionmark_right', {
-    scrollTrigger: ".about_wrapper p",
-    delay: 1,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.05,
-    y: 500,
-    ease: "back.out(1.7)"
-});
+const currentScroll = window.pageYOffset; 
 
-gsap.from('.timeline h1', {
-    scrollTrigger: ".timeline h1",
-    delay: 0.8,
-    opacity: 100,
-    duration: 0.8,
-    x: -1000
-});
+if (currentScroll <= 0) { 
 
-gsap.from('#dot1', {
-    scrollTrigger: "#timeline_item_1",
-    delay: 0.5,
-    opacity: 100,
-    duration: 0.8,
-    y: 500
-});
+body.classList.remove("scroll-up"); 
 
-gsap.from('#timeline_item_1', {
-    scrollTrigger: "#timeline_item_1",
-    delay: 0.5,
-    opacity: 100,
-    duration: 0.8,
-    x: 1500
-});
+return; 
 
+} 
 
+ 
+ 
 
-gsap.from('#dot2', {
-    scrollTrigger: "#timeline_item_2",
-    delay: 0.5,
-    opacity: 100,
-    duration: 0.8,
-    y: 500
-});
+if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) { 
 
-gsap.from('#timeline_item_2', {
-    scrollTrigger: "#timeline_item_2",
-    delay: 0.5,
-    opacity: 100,
-    duration: 0.8,
-    x: 1500
-});
+body.classList.remove("scroll-up"); 
 
-gsap.from('#dot3', {
-    scrollTrigger: "#timeline_item_3",
-    delay: 0.5,
-    opacity: 100,
-    duration: 0.8,
-    y: 500
-});
+body.classList.add("scroll-down"); 
 
-gsap.from('#timeline_item_3', {
-    scrollTrigger: "#timeline_item_3",
-    delay: 0.5,
-    opacity: 100,
-    duration: 0.8,
-    x: 1500
-});
+} else if ( 
 
+currentScroll < lastScroll && 
 
+body.classList.contains("scroll-down") 
 
+) { 
 
+body.classList.remove("scroll-down"); 
 
-gsap.from('#dot4', {
-    scrollTrigger: "#timeline_item_4",
-    delay: 0.5,
-    opacity: 100,
-    duration: 0.8,
-    y: 500
-});
+body.classList.add("scroll-up"); 
 
-gsap.from('#timeline_item_4', {
-    scrollTrigger: "#timeline_item_4",
-    delay: 0.5,
-    opacity: 100,
-    duration: 0.8,
-    x: 1500
-});
+} 
+
+lastScroll = currentScroll; 
+
+}); 
+
+function updateBackground(){
+    const background = $('')
+}

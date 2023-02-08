@@ -1,0 +1,214 @@
+body{
+    position: relative;
+}
+.calculator_wrapper{
+    width: 60%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display:flex;
+    flex-direction: row;
+}
+.the_calculator{
+    max-height: 100%;
+    width:60%;
+    background-color: white;
+    display: flex;
+    border-radius: 5px;
+    border: solid 1px darkgray;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
+    padding: 40px;
+    overflow-y: scroll;
+}
+.the_calculator p{
+    color: rgb(56, 55, 83);
+    font-size: 90%;
+}
+.the_calculator h3{
+    color: rgb(56, 55, 83);
+    font-size: 90%;
+}
+.calculator_section{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.calc_type{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+input[type='radio'][name='section_1'] { 
+    display:none; 
+}
+input[type='radio'][name='section_2'] { 
+    display:none; 
+}
+input[type='radio'][name='section_3'] { 
+    display:none; 
+}
+input[type='radio'][name='section_4'] { 
+    display:none; 
+}
+label{
+    border: none;
+    text-decoration: none;
+    padding: 30px 30px;
+    background: white;
+    border: solid 1px var(--theme-color);
+    font-size: 16px;
+    width: 100%;
+    color: var(--theme-color);
+    transition: 0.2;
+    text-align: center;
+}
+label:hover{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: solid 3px var(--theme-color);
+    cursor:pointer;
+    background-color: #bbbef5;
+}
+input[type='radio'][name='section_1']:checked + label { 
+    border: solid 3px transparent;
+    cursor:pointer;
+    color: white;
+    background-color: var(--theme-color);
+    font-size: 18px;
+    font-weight: bold;
+}
+input[type='radio'][name='section_2']:checked + label { 
+    border: solid 3px transparent;
+    cursor:pointer;
+    color: white;
+    background-color: var(--theme-color);
+    font-size: 18px;
+    font-weight: bold;
+}
+input[type='radio'][name='section_3']:checked + label { 
+    border: solid 3px transparent;
+    cursor:pointer;
+    color: white;
+    background-color: var(--theme-color);
+    font-size: 18px;
+    font-weight: bold;
+}
+input[type='radio'][name='section_4']:checked + label { 
+    border: solid 3px transparent;
+    cursor:pointer;
+    color: white;
+    background-color: var(--theme-color);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.slidecontainer {
+    width: 100%;
+  }
+  
+.slider {
+-webkit-appearance: none;
+width: 100%;
+height: 5px;
+border-radius: 5px;
+background: #d3d3d3;
+outline: none;
+opacity: 0.7;
+-webkit-transition: .2s;
+transition: opacity .2s;
+}
+
+.slider:hover {
+opacity: 1;
+}
+.more_info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.more_info img:hover{
+    cursor:pointer;
+}
+.more_info img{
+    width: 20px;
+    height: 20px;
+    margin-left: 1rem;
+}
+
+.slider::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+border: solid 1px darkgray;
+background: white;
+cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+width: 25px;
+height: 25px;
+border-radius: 50%;
+background: #04AA6D;
+cursor: pointer;
+}
+.pages_amount{
+    display: flex;
+    justify-content: space-between;
+}
+#design_info{
+    display: none;
+}
+#top_text_info{
+    display: none;
+
+}
+.top_text{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    vertical-align: auto;
+}
+
+
+.pris_header{
+    width: 300px;
+    background-color:#FC6d6d;
+    color: #fff;
+    font-weight: 600;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+}
+.calc_btn_2{
+    display: flex;
+    flex-direction: column;
+    
+}
+.calc_btn_2 button{
+    border: none;
+    text-decoration: none;
+    padding: 20px 30px;
+    background: white;
+    border: solid 1px var(--theme-color);
+    font-size: 16px;
+    width: 100%;
+    color: var(--theme-color);
+    border-radius: 20px;
+}
+
+
+
+.bold-color{
+    color:#FC6d6d;
+}
