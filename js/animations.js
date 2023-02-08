@@ -91,3 +91,22 @@ gsap.from('#dot4', {
     duration: 0.5,
     y: 200,
 });
+let calcTL = gsap.timeline({
+    scrollTrigger:{
+        trigger: '.calc_wrapper',
+    }
+});
+calcTL.from('.calc_img', {
+    x: -200,
+    duration: 1
+})
+calcTL.from('.calc_text', {
+    y: 300, 
+    opacity: 0, 
+    duration:1
+}, "-=1");
+gsap.from('.contact_illustration',{
+    scrollTrigger: '.contact_illustration',
+    y:300,
+    duration: 0.8
+})
