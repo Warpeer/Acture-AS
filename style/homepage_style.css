@@ -808,7 +808,7 @@ footer{
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    
+    align-self: center;
     color: white;
     padding: 20px;
 }
@@ -975,7 +975,7 @@ textarea {
     font-size: 1rem;
     background-color: #ffffff;
     color: var(--darkmode-bg);
-    border-bottom: 1px solid var(--theme-color);
+    border-bottom: 2px solid var(--theme-color);
 }
 
 input:focus,

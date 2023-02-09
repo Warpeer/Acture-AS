@@ -21,8 +21,7 @@ gsap.from('.about_column2', {
 
 gsap.from('.service_card', {
     scrollTrigger: {
-        trigger: '.gallery',
-        start: "bottom bottom"
+        trigger: '.service_card'
     },
     opacity: 0,
     duration: 0.5,

@@ -113,6 +113,7 @@ input[type='radio'][name='section_4']:checked + label {
     font-size: 18px;
     font-weight: bold;
     margin: -2px;
+    transform: scale(105%);
 }
 
 .slidecontainer {
@@ -123,7 +124,7 @@ input[type='radio'][name='section_4']:checked + label {
 -webkit-appearance: none;
 width: 100%;
 height: 5px;
-border-radius: 5px;
+border-radius: 5px 5px 0 0;
 background: #d3d3d3;
 outline: none;
 opacity: 0.7;
@@ -133,6 +134,11 @@ transition: opacity .2s;
 
 .slider:hover {
 opacity: 1;
+}
+.output{
+    font-weight: bolder;
+    color: #404258;
+    margin-right: 7px;
 }
 .more_info{
     display: flex;
@@ -239,4 +245,12 @@ header{
 }
 .scroll-up .logo {
     color: var(--white);
+}
+.calc_bg{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    width: 100%;
 }
