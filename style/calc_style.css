@@ -1,5 +1,5 @@
 body{
-    position: relative;
+
 }
 .calculator_wrapper{
     width: 60%;
@@ -73,7 +73,8 @@ label:hover{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    border: solid 3px var(--theme-color);
+    outline:solid 3px var(--theme-color);
+    outline-offset: -2px;
     cursor:pointer;
     background-color: #bbbef5;
 }
@@ -180,10 +181,11 @@ cursor: pointer;
 
 
 .pris_header{
+
     width: 300px;
-    background-color:#FC6d6d;
+    background-color: var(--alertenativ-color);
     color: #fff;
-    font-weight: 600;
+    font-weight: 400;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     font-size: 18px;
@@ -211,4 +213,64 @@ cursor: pointer;
 
 .bold-color{
     color:#FC6d6d;
+}
+
+.result_bar{
+    max-height: 100%;
+    width:60%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: scroll;
+}
+.results{
+    background:rgb(48, 53, 166);
+    color:white;
+    font-size:50px;
+    text-align: center;
+    background:url(/images/backgrounds/liquid-cheese\ \(1\).svg);
+
+    background-size: cover;
+    height:auto;
+    padding-bottom:20px;
+}
+.final_price{
+    color:white;
+}
+.info{
+    width:100%;
+    background:rgb(239, 238, 238);
+    height:100%;
+}
+
+.estimate_price {
+    padding-top:100px;
+}
+.estimate_price p{
+    font-weight:200;
+}
+
+.priskalkis{
+    background:white;
+    color: black;
+    padding: 10px 30px 10px 30px;
+}
+
+.info p{
+    color:rgb(101, 95, 95);
+    font-size:13px;
+    text-align:center;
+    padding:20px;
+}
+
+.results a{
+    font-size:16px;
+    display:flex;
+    text-align:center;
+    width:fit-content;
+    margin:auto;
+    text-decoration: underline;
+    color:white;
+    font-weight: 200;
 }
