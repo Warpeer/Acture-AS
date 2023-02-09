@@ -2,8 +2,8 @@ body{
 
 }
 .calculator_wrapper{
-    width: 60%;
-    height: 50%;
+    width: 70%;
+    height: 60%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -206,7 +206,7 @@ cursor: pointer;
 .calc_btn_2{
     display: flex;
     flex-direction: column;
-    
+    outline-offset: -2px;
 }
 .calc_btn_2 button{
     border: none;
@@ -228,22 +228,22 @@ cursor: pointer;
 
 .result_bar{
     max-height: 100%;
-    width:60%;
+    width:40%;
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    overflow-y: scroll;
+    justify-content: flex-end;
+    overflow-y: hidden;
 }
 .results{
     background:rgb(48, 53, 166);
     color:white;
     font-size:50px;
     text-align: center;
-    background:url(/images/backgrounds/liquid-cheese\ \(1\).svg);
-
+    background:url(/images/backgrounds/liquid-cheese.svg);
     background-size: cover;
-    height:auto;
+    flex: 1;
+    background-size: cover;
     padding-bottom:20px;
 }
 .final_price{
@@ -252,7 +252,7 @@ cursor: pointer;
 .info{
     width:100%;
     background:rgb(239, 238, 238);
-    height:100%;
+    height:fit-content;
 }
 
 .estimate_price {
