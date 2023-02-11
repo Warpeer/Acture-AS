@@ -370,6 +370,8 @@ cursor: pointer;
     }
     section{
         background-image: none;
+        height: fit-content;
+        overflow-y: visible;
     }
     label{
         padding: 20px 20px;
