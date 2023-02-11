@@ -228,7 +228,6 @@ opacity: 1;
 .scroll-down header {
 transform: translate3d(0, -100%, 0);
 }
-
 .scroll-up header {
     background: #ffffff;
 }
