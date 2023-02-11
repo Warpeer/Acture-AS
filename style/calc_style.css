@@ -1,3 +1,6 @@
+body{
+    width: 100vw;
+}
 section{
     background-image: url("../images/backgrounds/calc_bg1.svg");
     background-size: cover;
@@ -26,7 +29,6 @@ section{
     flex-direction: row;
 }
 .the_calculator{
-    max-height: 100%;
     width:60%;
     background-color: white;
     display: flex;
@@ -37,7 +39,6 @@ section{
     gap: 3rem;
     padding: 40px;
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
 }
 .the_calculator p{
     color: rgb(56, 55, 83);
@@ -307,17 +308,14 @@ cursor: pointer;
     
 }
 @media only screen and (max-width:1000px){
-
     .calculator_wrapper{
         flex-direction:column;
         height: revert;
         position: static;
         transform: revert;
-       
     }
     .the_calculator{
         width:100%;
-        overflow-y: visible;
     }
     .result_bar{
         width:100%;
@@ -331,37 +329,46 @@ cursor: pointer;
         background-image: url("../images/backgrounds/calc_bg4.svg");
         background-size: cover;
         height:fit-content;
+        position:static;
+        overflow-y: visible;
     }
     .info{
         height: fit-content;
         overflow-y: hidden;
     }
     .calculator_container{
-        position: relative;
+        position: static;
         transform: none;
         left: 0;
         margin: auto;
         margin-top: 10%;
+        overflow-y: hidden;
     }
     .scroll-up .hamburger_line{
         background:white;
     }
-  
+    .footer{
+        position: static;
+    }
 }
 @media only screen and (max-width: 540px) {
     .calculator_wrapper{
         width: 100%;
+        min-height: 0px;
+        height:fit-content;
     }
     .the_calculator{
         border: none;
         width:100%;
         margin-bottom: 5rem;
-
+        height: fit-content;
     }
     .calculator_container{
         width:100%;
         padding: 40px;
-        height: fit-content;
+        min-height: fit-content;
+        margin-top: 50px;
+        display: block;
     }
     .calculator_container h1{
         font-size: 26px;
@@ -370,12 +377,11 @@ cursor: pointer;
         padding: 0;
     }
     section{
-        background-image: none;
-        height: fit-content;
-        overflow-y: visible;
+        background: none;
+        padding-top: 0;
     }
     label{
         padding: 20px 20px;
     }
     
-    }
+}
