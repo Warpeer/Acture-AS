@@ -10,14 +10,14 @@ output.innerHTML = slider.value; // Display the default slider value
 $('#more_info').click(()=>{
     let div = $('#top_text_info');
     if(div.css("display")== "none"){
-        div.show("slow");
-    }else div.hide("slow");
+        div.show("fast");
+    }else div.hide("fast");
 });
 $('#more_info2').click(()=>{
     let div = $('#design_info');
     if(div.css("display")== "none"){
-        div.show("slow");
-    }else div.hide("slow");
+        div.show("fast");
+    }else div.hide("fast");
 });
 
 $('.btn').click(()=>{
@@ -170,3 +170,23 @@ lastScroll = currentScroll;
 function updateBackground(){
     const background = $('')
 }
+
+
+
+const hamburger = document.getElementById('hamburger');
+const hamburgers = document.getElementsByClassName('hamburger_line');
+const navUL = document.getElementById('nav-ul');
+const header = document.getElementById('header');
+
+hamburger.addEventListener('click', ()=>{
+    navUL.classList.toggle('show');
+    header.classList.toggle('bg');
+    if(header.hasClass('bg')){
+        for(let i = 0; i<hamburgers.length; i++){
+            hamburgers[i].style.backgroundColor="#3035a6";
+        }
+    }
+})
+
+
+

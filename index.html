@@ -8,33 +8,42 @@
 
     <link rel="stylesheet" href="style/homepage_style.css"></link>
 
+
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <title>Hjemmeside</title>
 
 </head>
 
 <body>
-    <header>
-        <div class="inner flex"> 
-            <div class="logo_div">
-                <img src="/images/icons/logo.svg" alt="">
-                <a href="#" class="logo">Acture</a>
+    <header id="header">
+        <div class="container flex">
+            <div class="logo_wrapper">
+                <img src="images/icons/logo.svg" alt="logo" class="logo" >
+                <h1>Acture</h1>
             </div>
-            <nav> 
-            <ul>
-            <li><a href="index.html" class="active">Hjem</a></li> 
-            <li><a href="price.html">Tjenester</a></li> 
-            <li><a href="test.html">FAQ</a></li>
-            <li><a href="#">Priskalkulator</a></li>  
-            </ul> 
-            </nav> 
-            <li class="kontakt">  
-            <a href="#"> Kontakt oss</a> 
-            </li> 
+                
+                <div class="hamburger" id="hamburger">
+                <div class="hamburger_line"></div>
+                <div class="hamburger_line"></div>
+                <div class="hamburger_line"></div>
+                </div>
+                <ul class="nav-ul" id="nav-ul">
+                    <li><a href="#">Hjem</a></li>
+                    <li><a href="price.html">Tjenester</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Priskalkulator</a></li>
+                    <li class="kontakt_list"><a href="#">Kontakt oss</a></li>
+                </ul>
+                <ul class="nav-ul">
+                    <li class="kontakt">  
+                        <a href="#"> Kontakt oss</a> 
+                    </li> 
+                </ul>
         </div>   
     </header>
     <div class="content-wrapper">
@@ -60,7 +69,6 @@
                             bedrift. Vårt webutviklingsselskap tilbyr unike, tilpassede løsninger som er designet for å
                             øke online tilstedeværelsen din og konvertere besøkende til kunder.
                         </p>
-                        <button class="default_button">Les mer</button>
                     </div>
                     <div class="about_img1">
                         <img src="./images/slideshow_images/office.png">
@@ -76,31 +84,29 @@
                             bedrift. Vårt webutviklingsselskap tilbyr unike, tilpassede løsninger som er designet for å
                             øke online tilstedeværelsen din og konvertere besøkende til kunder.
                         </p>
-                        <div>
-                            <button class="default_button">Les mer</button>
-                            <button class="default_button_reverse">Kom i gang!</button>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="gallery">
-            <div class="gallery_wrapper">
-                <div class="service_card" id="vedlikehold">
-                    <img src="images/icons/maintance.svg">
-                    <p>Vedlikehold</p>
-                </div>
-                <div class="service_card" id="utvikling">
-                    <img src="images/icons/terminal.svg">
-                    <p>Utvikling</p>
-                </div>
-                <div class="service_card" id="database">
-                    <img src="images/icons/database.svg">
-                    <p>Lagring i skyen</p>
-                </div>
-                <div class="service_card" id="design">
-                    <img src="images/icons/design.svg">
-                    <p>Design</p>
+            <div class="gallery_container">
+                <div class="gallery_wrapper">
+                    <div class="service_card" id="vedlikehold">
+                        <img src="images/icons/maintance.svg">
+                        <p>Vedlikehold</p>
+                    </div>
+                    <div class="service_card" id="utvikling">
+                        <img src="images/icons/terminal.svg">
+                        <p>Utvikling</p>
+                    </div>
+                    <div class="service_card" id="database">
+                        <img src="images/icons/database.svg">
+                        <p>Lagring i skyen</p>
+                    </div>
+                    <div class="service_card" id="design">
+                        <img src="images/icons/design.svg">
+                        <p>Design</p>
+                    </div>
                 </div>
                 <h1 class="title">Tjenester</h1>
             </div>
@@ -118,14 +124,14 @@
             <img src="images/slideshow_images/dot3.svg" class="timeline_dot" id="dot2">
             <img src="images/slideshow_images/dot3.svg" class="timeline_dot" id="dot3">
             <img src="images/slideshow_images/dot3.svg" class="timeline_dot" id="dot4">
-
             <div class="timeline_item" id="timeline_item_1">
-                <div class="timeline_title">
+                <div class="timeline_title expand_timeline_item">
                     <h1 class="main_color">
-                        Vi planlegger prosjektet med deg.
+                        <span class="timeline_indeks">1.</span>  Planlegging.
                     </h1>
+                    <img src="./images/icons/timeline_icons/read_more.svg" id="tl_more_info">
                 </div>
-                <div class="timeline_desc">
+                <div class="timeline_desc" id="timeline_desc_1">
                     <p class="paragraph_color">
                         Vi vil planlegge prosjektet med deg slik at du for en komplett idé om hvordan siden skal formatteres. Dette gjøres slik at sjansene for at du som kunde ikke blir fornlyd, blir minimal.
                         Dersom du heller ønsker at vi skal ta av oss all planlegging, er det også mulighet for dette, men da må du være klar over at du ikke vil ha like mye kontroll over
@@ -134,13 +140,14 @@
                 </div>
             </div>
 
-            <div class="timeline_item" id="timeline_item_2">
-                <div class="timeline_title">
+            <div class="timeline_item swiper_slide" id="timeline_item_2">
+                <div class="timeline_title expand_timeline_item">
                     <h1 class="main_color">
-                        Vi starter å utvikle din løsning.
+                        <span class="timeline_indeks">2.</span> Utvikling.
                     </h1>
+                    <img src="./images/icons/timeline_icons/read_more.svg" id="tl_more_info2">
                 </div>
-                <div class="timeline_desc">
+                <div class="timeline_desc" id="timeline_desc_2">
                     <p class="paragraph_color">
                         Når planleggingen er ferdig setter teamet vårt i gang med utvikling. Vi benytter oss av de nyeste teknologiene, de mest moderne rammeverkene for å gjøre siden så
                         skreddersydd for din smak som mulig. Vi velger hva som vil passe best etter dine behov og budsjett.
@@ -168,12 +175,13 @@
             </div>
 
             <div class="timeline_item" id="timeline_item_3">
-                <div class="timeline_title">
+                <div class="timeline_title expand_timeline_item">
                     <h1 class="main_color">
-                        Revisjoner
+                        <span class="timeline_indeks">3.</span> Revisjoner
                     </h1>
+                    <img src="./images/icons/timeline_icons/read_more.svg" id="tl_more_info3">
                 </div>
-                <div class="timeline_desc">
+                <div class="timeline_desc" id="timeline_desc_3">
                     <p class="paragraph_color">
                         Faller ikke siden i smak? Frykt ikke, du har nemlig et uendelig antall revisjoner; du gir prosjektet tilbakemelding og vi tilpasser siden etter kritikken.
                         Slik kan vi garantere at du vil få noe du er 100% fornøyd med. Vi gir oss ikke dersom kunden ikke er tilfredsstilt!.
@@ -194,33 +202,31 @@
                 </div>
             </div>
 
-            <div class="timeline_item" id="timeline_item_4">
-                <div class="timeline_title">
+            <div class="timeline_item swiper_slide" id="timeline_item_4">
+                <div class="timeline_title expand_timeline_item">
                     <h1 class="main_color">
-                        Lansering
+                       <span class="timeline_indeks">4.</span> Lansering
                     </h1>
+                    <img src="./images/icons/timeline_icons/read_more.svg" id="tl_more_info4">
                 </div>
-                <div class="timeline_desc">
-                    <div>
-                        <p class="paragraph_color">
-                            Alle nettsider trenger et sted å bo. Når utviklingen er ferdig, og kunden har validert alt, vil vi ta hånd om en webhost for deg. Altså, vi vil være med deg hele veien
-                            fra fødselen av siden, til den er oppe å kjører på internettet.
-                        </p>
-                        <img>
-                    </div>
+                <div class="timeline_desc" id="timeline_desc_4">
+                    <p class="paragraph_color">
+                        Alle nettsider trenger et sted å bo. Når utviklingen er ferdig, og kunden har validert alt, vil vi ta hånd om en webhost for deg. Altså, vi vil være med deg hele veien
+                        fra fødselen av siden, til den er oppe å kjører på internettet.
+                    </p>
                 </div>
             </div>
-        
         </section>
         <section class="calc_wrapper">
             <div class="calc_img">
-                
             </div>
-            <div class="calc_text">
-                <h1 class="title">Prøv vår <span class="alternativ_color">Priskalkulator</span></h1>
-                <p>
-                    Lyst på en litt mer skreddersydd idé om hva nettsiden din vil koste? Klikk deg gjennom vår priskalkulator å få et prisestimat på siden som passer ditt behov!
-                </p>
+            <div class="calc_content">
+                <div class="calc_text">
+                    <h1 class="title">Prøv vår <span class="alternativ_color">Priskalkulator</span></h1>
+                    <p>
+                        Lyst på en litt mer skreddersydd idé om hva nettsiden din vil koste? Klikk deg gjennom vår priskalkulator å få et prisestimat på siden som passer ditt behov!
+                    </p>
+                </div>
                 <button class="default_button_reverse button">Kalkuler pris ></button>
             </div>
         </section>
@@ -229,9 +235,9 @@
         <section class="contact_section">
             <div class="contact_wrapper">
                 <div class="contact_container">
-                    <div>
+                    <div class="calc_top_text">
                         <h1 class="title main_color">Kontakt oss da vel!</h1>
-                        <h4 class="contact_subheader">Vi vil gjerne høre fra <span class="alternativ_color">deg</span>!</h4>
+                        <p class="contact_subheader">Vi vil gjerne høre fra <span class="alternativ_color">deg</span>!</p>
                     </div>
                     <div class="input-container">
                         <div class="small_input_wrapper">
