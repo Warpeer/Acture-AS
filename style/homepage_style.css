@@ -336,7 +336,7 @@ transform: translate3d(0, -100%, 0);
     height: 100vh;
     max-height: 1300px;
     position: relative;
-    background-image: url(/images/slideshow_images/office1.png);
+    background-image: url("../images/slideshow_images/office1.png");
     background-size: cover;
     z-index: -2;
 }
@@ -516,7 +516,7 @@ p {
     flex-direction: column;
     justify-content: space-evenly;
     /*background-color: var(--theme-color);*/
-    background-image: url(/images/backgrounds/tjenester_bg5.svg);
+    background-image: url(../images/backgrounds/tjenester_bg5.svg);
     background-size:cover;
     position: relative;
     overflow-x: hidden;
@@ -589,7 +589,7 @@ p {
     height: 1700px;
     display: flex;
     align-items: center;
-    background-image: url(/images/backgrounds/timeline_bg1.svg);
+    background-image: url(../images/backgrounds/timeline_bg1.svg);
     background-size: cover;
     z-index: 1;
 }
@@ -774,7 +774,7 @@ flex-direction: column;
 justify-content: space-evenly;
 }
 .calc_img{
-    background: url("/images/slideshow_images/office.png");
+    background: url("../images/slideshow_images/office.png");
     background-size: cover;
     width: 70%;
     height:100%;
@@ -816,7 +816,7 @@ color: white;
 }
 .contact_illustration{
     width: 40%;
-    background-image: url(/images/backgrounds/contact_bg1.svg);
+    background-image: url(../images/backgrounds/contact_bg1.svg);
     background-size:cover;
     position: relative;
     margin-top: 50px;

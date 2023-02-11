@@ -1,5 +1,5 @@
 section{
-    background-image: url("/images/backgrounds/calc_bg1.svg");
+    background-image: url("../images/backgrounds/calc_bg1.svg");
     background-size: cover;
     height: 100vh;
     position: relative;
@@ -37,6 +37,7 @@ section{
     gap: 3rem;
     padding: 40px;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 .the_calculator p{
     color: rgb(56, 55, 83);
@@ -254,7 +255,7 @@ cursor: pointer;
     color:white;
     font-size:50px;
     text-align: center;
-    background:url(/images/backgrounds/liquid-cheese.svg);
+    background:url(../images/backgrounds/liquid-cheese.svg);
     background-size: cover;
     flex: 1;
     background-size: cover;
@@ -327,7 +328,7 @@ cursor: pointer;
         display:none;
     }
     section{
-        background-image: url("/images/backgrounds/calc_bg4.svg");
+        background-image: url("../images/backgrounds/calc_bg4.svg");
         background-size: cover;
         height:fit-content;
     }
