@@ -361,6 +361,7 @@ cursor: pointer;
     .calculator_container{
         width:100%;
         padding: 40px;
+        height: fit-content;
     }
     .calculator_container h1{
         font-size: 26px;
