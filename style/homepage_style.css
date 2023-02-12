@@ -743,7 +743,7 @@ p {
 
 
 
-
+/*---------------------------calc----------------------------------*/
 .calc_wrapper {
     display: flex;
     align-items: center;
@@ -790,15 +790,20 @@ color: white;
     line-height: 40px;
 }
   
-.button{
-    max-width:fit-content;
-}
 
+.calc_next{
+    width: 100px;
+}
+.calc_next:hover{
+    filter: invert(62%) sepia(73%) saturate(1597%) hue-rotate(316deg) brightness(101%) contrast(98%);
+    cursor: pointer;
+    transition: 0.2s;
+}
   /*--------------------------------------Contact SECTION--------------------------------------*/
 .contact_section {
     height: auto;
     margin-top: 100px;
-
+    
 }
 .contact_wrapper{
     width: 100%;
@@ -1044,10 +1049,12 @@ input[type=checkbox]:checked + label {
        object-fit: contain;
     }
     .about_text1{
-        gap: 0.5rem;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
     }
     .about_text2{
-        gap: 0.5rem;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
     }
     .about_text1 p{
         font-size: 16px;
@@ -1205,7 +1212,7 @@ input[type=checkbox]:checked + label {
     }
     .gallery{
         height: fit-content;
-        padding: 5rem 0;
+        padding: 3rem 0;
     }
     .gallery_container{
         flex-direction: column-reverse;
@@ -1272,6 +1279,7 @@ input[type=checkbox]:checked + label {
     #dot4 {
         top: 73.3%;
     }
+    
     .calc_img{
         display: none;
     }
@@ -1444,17 +1452,17 @@ input[type=checkbox]:checked + label {
     text-align: left;
 }
 .about_text1 h1{
-    font-size: 23px;
+    font-size: 27px;
 }
 .about_text2 h1{
     font-size: 23px;
     text-align: left;
 }
 .about_text1{
-    padding: 10px 0;
+    padding: 1.5rem 0;
 }
 .about_text2{
-    padding: 10px 0;
+    padding: 1.5rem 0;
 }
 .about_img1{
     border-radius: 2px;
